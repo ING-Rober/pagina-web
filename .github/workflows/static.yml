@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ing. Robert Santos Salvador | Soporte Técnico y Servicios IT</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for professional icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            900: '#1e3a8a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-brand-500 selection:text-white">
+
+    <!-- Navigation Bar -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo & Brand -->
+                <div class="flex items-center space-x-3">
+                    <div class="w-11 h-11 bg-gradient-to-tr from-brand-700 to-brand-500 text-white rounded-xl flex items-center justify-center font-bold text-xl shadow-md shadow-brand-500/20">
+                        RS
+                    </div>
+                    <div>
+                        <span class="block font-bold text-lg text-slate-900 leading-tight">Ing. Robert Santos Salvador</span>
+                        <span class="block text-xs font-medium text-brand-600 tracking-wider uppercase">Soporte y Consultoría IT</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex items-center space-x-8 font-medium text-sm text-slate-600">
+                    <a href="#inicio" class="hover:text-brand-600 transition-colors">Inicio</a>
+                    <a href="#servicios" class="hover:text-brand-600 transition-colors">Servicios</a>
+                    <a href="#sobre-mi" class="hover:text-brand-600 transition-colors">Sobre Mí</a>
+                    <a href="#testimonios" class="hover:text-brand-600 transition-colors">Testimonios</a>
+                    <a href="#contacto" class="hover:text-brand-600 transition-colors">Contacto</a>
+                </nav>
+
+                <!-- CTA Button -->
+                <div class="hidden md:flex items-center">
+                    <a href="#contacto" class="px-5 py-2.5 rounded-xl bg-brand-600 text-white font-medium text-sm shadow-lg shadow-brand-600/25 hover:bg-brand-700 transition-all transform hover:-translate-y-0.5">
+                        <i class="fa-brands fa-whatsapp mr-2 text-base"></i> Cotizar Servicio
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="flex md:hidden">
+                    <button type="button" id="mobile-menu-btn" class="p-2.5 rounded-xl text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition-colors">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Modal -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-3 shadow-xl">
+            <a href="#inicio" class="block py-2 px-3 rounded-lg text-base font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-600">Inicio</a>
+            <a href="#servicios" class="block py-2 px-3 rounded-lg text-base font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-600">Servicios</a>
+            <a href="#sobre-mi" class="block py-2 px-3 rounded-lg text-base font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-600">Sobre Mí</a>
+            <a href="#testimonios" class="block py-2 px-3 rounded-lg text-base font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-600">Testimonios</a>
+            <a href="#contacto" class="block py-2 px-3 rounded-lg text-base font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-600">Contacto</a>
+            <div class="pt-2">
+                <a href="#contacto" class="w-full flex items-center justify-center px-5 py-3 rounded-xl bg-brand-600 text-white font-medium text-sm shadow-md">
+                    <i class="fa-brands fa-whatsapp mr-2 text-lg"></i> Cotizar por WhatsApp
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="pt-32 pb-20 md:pt-40 md:pb-32 bg-gradient-to-b from-brand-50/50 via-white to-slate-50 relative overflow-hidden">
+        <div class="absolute top-0 right-0 -z-10 w-96 h-96 bg-brand-100/60 rounded-full blur-3xl transform translate-x-1/3 -translate-y-1/4"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+                <div class="md:col-span-7 space-y-6 text-center md:text-left">
+                    <div class="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-brand-100 text-brand-700 text-xs font-semibold tracking-wide uppercase">
+                        <span class="w-2 h-2 rounded-full bg-brand-600 animate-pulse"></span>
+                        <span>Ingeniería y Soporte Tecnológico Profesional</span>
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight">
+                        Soluciones IT Eficientes para <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-indigo-600">Empresas y Hogares</span>
+                    </h1>
+                    <p class="text-lg sm:text-xl text-slate-600 max-w-2xl mx-auto md:mx-0">
+                        Hola, soy el <strong class="text-slate-800">Ing. Robert Santos Salvador</strong>. Brindo servicios especializados de soporte técnico, mantenimiento avanzado, redes corporativas y ciberseguridad para garantizar la continuidad de tus operaciones.
+                    </p>
+                    <div class="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 pt-4">
+                        <a href="#contacto" class="w-full sm:w-auto px-8 py-4 rounded-2xl bg-brand-600 text-white font-semibold shadow-xl shadow-brand-600/25 hover:bg-brand-700 transition-all text-center flex items-center justify-center">
+                            <i class="fa-solid fa-headset mr-3 text-lg"></i> Solicitar Asistencia
+                        </a>
+                        <a href="#servicios" class="w-full sm:w-auto px-8 py-4 rounded-2xl bg-white text-slate-700 border border-slate-300 font-semibold hover:bg-slate-50 transition-all text-center flex items-center justify-center shadow-sm">
+                            Explorar Servicios <i class="fa-solid fa-arrow-down ml-2 text-sm"></i>
+                        </a>
+                    </div>
+                    <!-- Stats bar -->
+                    <div class="grid grid-cols-3 gap-4 pt-8 border-t border-slate-200/80 mt-8">
+                        <div>
+                            <span class="block text-2xl sm:text-3xl font-extrabold text-slate-900">+10</span>
+                            <span class="text-xs sm:text-sm text-slate-500 font-medium">Años de Experiencia</span>
+                        </div>
+                        <div>
+                            <span class="block text-2xl sm:text-3xl font-extrabold text-slate-900">+500</span>
+                            <span class="text-xs sm:text-sm text-slate-500 font-medium">Proyectos Exitosos</span>
+                        </div>
+                        <div>
+                            <span class="block text-2xl sm:text-3xl font-extrabold text-slate-900">100%</span>
+                            <span class="text-xs sm:text-sm text-slate-500 font-medium">Garantía y Soporte</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Visual / Badge Card -->
+                <div class="md:col-span-5 flex justify-center">
+                    <div class="relative w-full max-w-md bg-white rounded-3xl p-8 shadow-2xl border border-slate-100">
+                        <div class="absolute -top-4 -right-4 bg-amber-400 text-slate-900 text-xs font-bold px-3 py-1.5 rounded-full shadow-md flex items-center space-x-1">
+                            <i class="fa-solid fa-shield-halved"></i> <span>Disponible 24/7</span>
+                        </div>
+                        <div class="flex items-center space-x-4 mb-6">
+                            <div class="w-16 h-16 bg-brand-100 rounded-2xl flex items-center justify-center text-brand-600 text-2xl font-bold shadow-inner">
+                                <i class="fa-solid fa-user-tie"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg text-slate-900">Ing. Robert Santos</h3>
+                                <p class="text-xs text-brand-600 font-semibold">Especialista en Tecnologías de la Información</p>
+                                <div class="flex items-center space-x-1 text-amber-500 text-xs mt-1">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    <span class="text-slate-500 ml-1">(4.9/5 Calificación)</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="space-y-3 bg-slate-50 p-4 rounded-2xl border border-slate-100 mb-6 text-sm">
+                            <div class="flex items-center justify-between text-slate-600">
+                                <span class="flex items-center"><i class="fa-solid fa-check text-emerald-500 mr-2"></i> Diagnóstico Rápido</span>
+                                <span class="font-semibold text-slate-900">Remoto / Presencial</span>
+                            </div>
+                            <div class="flex items-center justify-between text-slate-600">
+                                <span class="flex items-center"><i class="fa-solid fa-check text-emerald-500 mr-2"></i> Redes & Servidores</span>
+                                <span class="font-semibold text-slate-900">Configuración Pro</span>
+                            </div>
+                            <div class="flex items-center justify-between text-slate-600">
+                                <span class="flex items-center"><i class="fa-solid fa-check text-emerald-500 mr-2"></i> Seguridad Informática</span>
+                                <span class="font-semibold text-slate-900">Backup & Firewall</span>
+                            </div>
+                        </div>
+                        <a href="#contacto" class="w-full py-3.5 bg-slate-900 text-white rounded-xl font-medium text-center block hover:bg-slate-800 transition-colors shadow-lg">
+                            Agendar Consulta Gratuita
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicios" class="py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-600 font-semibold text-sm tracking-widest uppercase bg-brand-50 px-3 py-1 rounded-full">Servicios Profesionales</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3 tracking-tight">Soluciones Tecnológicas Integrales</h2>
+                <p class="text-slate-600 mt-4 text-base sm:text-lg">Ofrezco una gama completa de servicios diseñados para optimizar el rendimiento y la seguridad de la infraestructura tecnológica de tu negocio u hogar.</p>
+            </div>
+
+            <!-- Service Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-slate-50 rounded-3xl p-8 border border-slate-100 hover:shadow-xl transition-all duration-300 group hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-brand-600 text-white rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-md shadow-brand-600/30 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Soporte Técnico Especializado</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                        Resolución de problemas de software, hardware, sistemas operativos Windows/Linux/macOS y asistencia remota o in situ inmediata.
+                    </p>
+                    <a href="#contacto" class="inline-flex items-center text-brand-600 font-semibold text-sm hover:text-brand-700">
+                        Solicitar Soporte <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-slate-50 rounded-3xl p-8 border border-slate-100 hover:shadow-xl transition-all duration-300 group hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-emerald-600 text-white rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-md shadow-emerald-600/30 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Mantenimiento de Equipos</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                        Mantenimiento preventivo y correctivo de PC, laptops y servidores. Limpieza interna, cambio de pasta térmica y optimización de velocidad.
+                    </p>
+                    <a href="#contacto" class="inline-flex items-center text-emerald-600 font-semibold text-sm hover:text-emerald-700">
+                        Agendar Mantenimiento <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-slate-50 rounded-3xl p-8 border border-slate-100 hover:shadow-xl transition-all duration-300 group hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-indigo-600 text-white rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-md shadow-indigo-600/30 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-network-wired"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Diseño y Cableado de Redes</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                        Instalación y configuración de redes LAN/WAN, routers, switches, puntos de acceso Wi-Fi corporativos y solución de problemas de conectividad.
+                    </p>
+                    <a href="#contacto" class="inline-flex items-center text-indigo-600 font-semibold text-sm hover:text-indigo-700">
+                        Mejorar mi Red <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="bg-slate-50 rounded-3xl p-8 border border-slate-100 hover:shadow-xl transition-all duration-300 group hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-rose-600 text-white rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-md shadow-rose-600/30 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-shield-cat"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Seguridad Informática</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                        Protección contra malware, instalación de antivirus corporativos, configuración de respaldos (backups) automáticos y políticas de seguridad.
+                    </p>
+                    <a href="#contacto" class="inline-flex items-center text-rose-600 font-semibold text-sm hover:text-rose-700">
+                        Proteger Datos <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="bg-slate-50 rounded-3xl p-8 border border-slate-100 hover:shadow-xl transition-all duration-300 group hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-amber-600 text-white rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-md shadow-amber-600/30 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-comments-dollar"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Consultoría IT Empresarial</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                        Asesoramiento estratégico en la adquisición de hardware, migración a la nube, optimización de flujos de trabajo digitales y reducción de costos IT.
+                    </p>
+                    <a href="#contacto" class="inline-flex items-center text-amber-600 font-semibold text-sm hover:text-amber-700">
+                        Consultar Ahora <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Service 6 (Emergency/Custom) -->
+                <div class="bg-gradient-to-br from-brand-900 to-slate-900 rounded-3xl p-8 text-white shadow-xl flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 bg-white/10 text-brand-400 rounded-2xl flex items-center justify-center text-2xl mb-6 backdrop-blur-sm">
+                            <i class="fa-solid fa-bolt"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">¿Emergencia Tecnológica?</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                            ¿Tu servidor cayó o perdiste acceso crítico? Comunícate directamente por WhatsApp para una atención de emergencia prioritaria.
+                        </p>
+                    </div>
+                    <a href="https://wa.me/51999999999?text=Hola%20Ing.%20Robert%20Santos,%20necesito%20asistencia%20técnica%20urgente." target="_blank" class="w-full py-3 bg-brand-500 hover:bg-brand-600 text-white font-semibold rounded-xl text-center text-sm shadow-md transition-all flex items-center justify-center">
+                        <i class="fa-brands fa-whatsapp mr-2 text-lg"></i> Asistencia Inmediata
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="sobre-mi" class="py-24 bg-slate-100/70 border-y border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-5">
+                    <div class="relative">
+                        <div class="w-full h-96 bg-gradient-to-tr from-brand-600 to-indigo-600 rounded-3xl shadow-xl flex flex-col items-center justify-center text-white p-8 text-center">
+                            <div class="w-28 h-28 bg-white/10 rounded-full flex items-center justify-center text-5xl mb-4 backdrop-blur-md border border-white/20">
+                                <i class="fa-solid fa-user-gear"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold">Ing. Robert Santos Salvador</h3>
+                            <p class="text-brand-100 text-sm mt-1">Ingeniero de Sistemas e IT Specialist</p>
+                        </div>
+                        <div class="absolute -bottom-6 -right-6 bg-white p-6 rounded-2xl shadow-xl border border-slate-100 hidden sm:block">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center text-xl font-bold">
+                                    <i class="fa-solid fa-award"></i>
+                                </div>
+                                <div>
+                                    <span class="block font-bold text-slate-900 text-base">Colegiado y Certificado</span>
+                                    <span class="text-xs text-slate-500">Profesional Altamente Calificado</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 space-y-6">
+                    <span class="text-brand-600 font-semibold text-sm tracking-widest uppercase bg-brand-100/60 px-3 py-1 rounded-full">Sobre Mí</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Comprometido con la Excelencia y la Innovación Tecnológica</h2>
+                    <p class="text-slate-600 text-base sm:text-lg leading-relaxed">
+                        Soy el <strong class="text-slate-900">Ingeniero Robert Santos Salvador</strong>, profesional apasionado por la tecnología con amplia experiencia en la implementación de soluciones informáticas, soporte técnico avanzado y gestión de redes para empresas y usuarios particulares.
+                    </p>
+                    <p class="text-slate-600 text-base leading-relaxed">
+                        Mi enfoque combina un profundo entendimiento técnico con una clara orientación al cliente. Entiendo que cada minuto de inactividad tecnológica representa pérdidas; por ello, garantizo diagnósticos certeros y soluciones rápidas, seguras y duraderas.
+                    </p>
+
+                    <!-- Feature checkmarks -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                        <div class="flex items-start space-x-3">
+                            <div class="w-6 h-6 rounded-full bg-brand-100 text-brand-600 flex items-center justify-center text-xs mt-1 shrink-0">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm">Atención Personalizada</h4>
+                                <p class="text-xs text-slate-500">Soluciones a la medida de tus requerimientos exactos.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-6 h-6 rounded-full bg-brand-100 text-brand-600 flex items-center justify-center text-xs mt-1 shrink-0">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm">Garantía Asegurada</h4>
+                                <p class="text-xs text-slate-500">Respaldo total en cada servicio de reparación o instalación.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-6 h-6 rounded-full bg-brand-100 text-brand-600 flex items-center justify-center text-xs mt-1 shrink-0">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm">Tecnología de Punta</h4>
+                                <p class="text-xs text-slate-500">Herramientas de diagnóstico y software actualizado.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-6 h-6 rounded-full bg-brand-100 text-brand-600 flex items-center justify-center text-xs mt-1 shrink-0">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm">Soporte Continuo</h4>
+                                <p class="text-xs text-slate-500">Asesoría permanente para prevenir futuros fallos.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-4">
+                        <a href="#contacto" class="inline-flex items-center px-6 py-3.5 rounded-xl bg-slate-900 text-white font-medium text-sm shadow-lg hover:bg-slate-800 transition-all">
+                            <i class="fa-regular fa-calendar-check mr-2 text-base"></i> Contratar Mis Servicios
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonios" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-600 font-semibold text-sm tracking-widest uppercase bg-brand-50 px-3 py-1 rounded-full">Testimonios</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3 tracking-tight">Lo que dicen mis clientes</h2>
+                <p class="text-slate-600 mt-4 text-base sm:text-lg">La satisfacción y la confianza de quienes han confiado en mi soporte técnico es mi mejor carta de presentación.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center space-x-1 text-amber-500 text-sm mb-4">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-600 text-sm leading-relaxed italic mb-6">
+                            "El Ing. Robert solucionó un problema crítico de red en nuestra oficina en tiempo récord. Su profesionalismo y claridad al explicar el fallo fueron excepcionales. Altamente recomendado."
+                        </p>
+                    </div>
+                    <div class="flex items-center space-x-3 pt-4 border-t border-slate-200">
+                        <div class="w-10 h-10 rounded-full bg-brand-600 text-white font-bold flex items-center justify-center text-sm">
+                            CM
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-sm">Carlos Mendoza</h4>
+                            <p class="text-xs text-slate-500">Gerente de Operaciones</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center space-x-1 text-amber-500 text-sm mb-4">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-600 text-sm leading-relaxed italic mb-6">
+                            "Contraté el servicio de mantenimiento preventivo para las laptops de mi estudio contable. Ahora funcionan como nuevas y me dio excelentes consejos de seguridad informática."
+                        </p>
+                    </div>
+                    <div class="flex items-center space-x-3 pt-4 border-t border-slate-200">
+                        <div class="w-10 h-10 rounded-full bg-emerald-600 text-white font-bold flex items-center justify-center text-sm">
+                            LR
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-sm">Lucía Ramírez</h4>
+                            <p class="text-xs text-slate-500">Directora Financiera</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center space-x-1 text-amber-500 text-sm mb-4">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-600 text-sm leading-relaxed italic mb-6">
+                            "Excelente atención remota. Tuve una emergencia con software de facturación y el Ing. Robert se conectó de inmediato para resolverlo. Muy ético y profesional."
+                        </p>
+                    </div>
+                    <div class="flex items-center space-x-3 pt-4 border-t border-slate-200">
+                        <div class="w-10 h-10 rounded-full bg-indigo-600 text-white font-bold flex items-center justify-center text-sm">
+                            JV
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-sm">Jorge Vásquez</h4>
+                            <p class="text-xs text-slate-500">Empresario Independiente</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="py-24 bg-gradient-to-b from-white to-brand-50/40 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-600 font-semibold text-sm tracking-widest uppercase bg-brand-50 px-3 py-1 rounded-full">Contacto Directo</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3 tracking-tight">¿Listo para mejorar tu tecnología?</h2>
+                <p class="text-slate-600 mt-4 text-base sm:text-lg">Completa el formulario o contáctame directamente vía WhatsApp para recibir asesoría personalizada inmediata.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <!-- Info Column -->
+                <div class="lg:col-span-5 space-y-8">
+                    <div class="bg-white p-8 rounded-3xl shadow-xl border border-slate-100 space-y-6">
+                        <h3 class="text-xl font-bold text-slate-900">Información de Contacto</h3>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-brand-50 text-brand-600 rounded-2xl flex items-center justify-center text-xl shrink-0">
+                                <i class="fa-solid fa-user-tie"></i>
+                            </div>
+                            <div>
+                                <span class="block text-xs text-slate-400 font-semibold uppercase">Profesional</span>
+                                <span class="text-slate-900 font-bold">Ing. Robert Santos Salvador</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center text-xl shrink-0">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </div>
+                            <div>
+                                <span class="block text-xs text-slate-400 font-semibold uppercase">WhatsApp / Teléfono</span>
+                                <a href="https://wa.me/51999999999" target="_blank" class="text-slate-900 font-bold hover:text-brand-600 transition-colors">+51 999 999 999</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-indigo-50 text-indigo-600 rounded-2xl flex items-center justify-center text-xl shrink-0">
+                                <i class="fa-regular fa-envelope"></i>
+                            </div>
+                            <div>
+                                <span class="block text-xs text-slate-400 font-semibold uppercase">Correo Electrónico</span>
+                                <a href="mailto:robert.santos@soporteit.com" class="text-slate-900 font-bold hover:text-brand-600 transition-colors">robert.santos@soporteit.com</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-amber-50 text-amber-600 rounded-2xl flex items-center justify-center text-xl shrink-0">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                            <div>
+                                <span class="block text-xs text-slate-400 font-semibold uppercase">Horario de Atención</span>
+                                <span class="text-slate-900 font-bold">Lunes a Sábado: 8:00 AM - 8:00 PM</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Direct WhatsApp Card -->
+                    <div class="bg-gradient-to-r from-emerald-600 to-teal-600 p-8 rounded-3xl text-white shadow-xl flex items-center justify-between">
+                        <div>
+                            <h4 class="font-bold text-lg mb-1">¿Prefieres chatear ahora?</h4>
+                            <p class="text-emerald-100 text-xs">Respuesta rápida garantizada por WhatsApp.</p>
+                        </div>
+                        <a href="https://wa.me/51999999999?text=Hola%20Ing.%20Robert%20Santos,%20deseo%20cotizar%20un%20servicio%20técnico." target="_blank" class="bg-white text-emerald-700 hover:bg-emerald-50 px-5 py-3 rounded-2xl font-bold text-sm shadow-md transition-all flex items-center">
+                            <i class="fa-brands fa-whatsapp text-xl mr-2"></i> Chatear
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Form Column -->
+                <div class="lg:col-span-7">
+                    <div class="bg-white p-8 sm:p-10 rounded-3xl shadow-xl border border-slate-100">
+                        <h3 class="text-2xl font-bold text-slate-900 mb-2">Envía un Mensaje</h3>
+                        <p class="text-slate-600 text-sm mb-8">Completa el formulario y el mensaje se enviará directamente a mi WhatsApp con los detalles ingresados.</p>
+
+                        <form id="contact-form" class="space-y-6" onsubmit="enviarWhatsApp(event)">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-xs font-bold uppercase text-slate-700 mb-2">Tu Nombre o Empresa *</label>
+                                    <input type="text" id="nombre" required class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-500 text-sm text-slate-800 transition-all" placeholder="Ej. Juan Pérez">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold uppercase text-slate-700 mb-2">Teléfono / Celular *</label>
+                                    <input type="tel" id="telefono" required class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-500 text-sm text-slate-800 transition-all" placeholder="Ej. 999999999">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-bold uppercase text-slate-700 mb-2">Servicio Requerido *</label>
+                                <select id="servicio" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-500 text-sm text-slate-800 transition-all">
+                                    <option value="Soporte Técnico General">Soporte Técnico General</option>
+                                    <option value="Mantenimiento de Equipos (PC/Laptops)">Mantenimiento de Equipos (PC/Laptops)</option>
+                                    <option value="Instalación y Diseño de Redes">Instalación y Diseño de Redes</option>
+                                    <option value="Seguridad Informática y Backups">Seguridad Informática y Backups</option>
+                                    <option value="Consultoría IT Empresarial">Consultoría IT Empresarial</option>
+                                    <option value="Emergencia IT">Emergencia IT</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-bold uppercase text-slate-700 mb-2">Detalles del Problema o Solicitud *</label>
+                                <textarea id="mensaje" rows="4" required class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-500 text-sm text-slate-800 transition-all" placeholder="Describe brevemente qué inconveniente tienes o qué servicio necesitas..."></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full py-4 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-2xl shadow-lg shadow-emerald-600/30 transition-all flex items-center justify-center text-base">
+                                <i class="fa-brands fa-whatsapp text-2xl mr-2"></i> Enviar Consulta por WhatsApp
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white pt-16 pb-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+                <div class="md:col-span-2 space-y-4">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-brand-600 text-white rounded-xl flex items-center justify-center font-bold text-lg">
+                            RS
+                        </div>
+                        <span class="font-bold text-xl text-white">Ing. Robert Santos Salvador</span>
+                    </div>
+                    <p class="text-slate-400 text-sm max-w-md leading-relaxed">
+                        Servicios profesionales de soporte técnico, mantenimiento de equipos, redes corporativas y ciberseguridad con altos estándares de calidad e ingeniería.
+                    </p>
+                </div>
+
+                <div class="space-y-4">
+                    <h4 class="font-bold text-sm uppercase tracking-wider text-slate-200">Enlaces Rápidos</h4>
+                    <ul class="space-y-2 text-sm text-slate-400">
+                        <li><a href="#inicio" class="hover:text-white transition-colors">Inicio</a></li>
+                        <li><a href="#servicios" class="hover:text-white transition-colors">Servicios</a></li>
+                        <li><a href="#sobre-mi" class="hover:text-white transition-colors">Sobre Mí</a></li>
+                        <li><a href="#testimonios" class="hover:text-white transition-colors">Testimonios</a></li>
+                        <li><a href="#contacto" class="hover:text-white transition-colors">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div class="space-y-4">
+                    <h4 class="font-bold text-sm uppercase tracking-wider text-slate-200">Servicios IT</h4>
+                    <ul class="space-y-2 text-sm text-slate-400">
+                        <li><span class="hover:text-white cursor-pointer">Soporte Técnico</span></li>
+                        <li><span class="hover:text-white cursor-pointer">Mantenimiento Preventivo</span></li>
+                        <li><span class="hover:text-white cursor-pointer">Redes y Conectividad</span></li>
+                        <li><span class="hover:text-white cursor-pointer">Seguridad Informática</span></li>
+                        <li><span class="hover:text-white cursor-pointer">Consultoría</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-slate-800 text-center text-xs text-slate-500 flex flex-col sm:flex-row items-center justify-between">
+                <p>&copy; 2026 Ing. Robert Santos Salvador. Todos los derechos reservados.</p>
+                <p class="mt-2 sm:mt-0">Soporte Técnico e Ingeniería IT Profesional</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu and WhatsApp Form -->
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on clicking links
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // WhatsApp Form integration
+        function enviarWhatsApp(event) {
+            event.preventDefault();
+            
+            const nombre = document.getElementById('nombre').value.trim();
+            const telefono = document.getElementById('telefono').value.trim();
+            const servicio = document.getElementById('servicio').value;
+            const mensaje = document.getElementById('mensaje').value.trim();
+
+            // Format message
+            const texto = `Hola Ing. Robert Santos Salvador,%0A%0AMi nombre es *${encodeURIComponent(nombre)}* (Tel: ${encodeURIComponent(telefono)}).%0A%0AEstoy interesado en el servicio de: *${encodeURIComponent(servicio)}*.%0A%0ADetalles:%0A${encodeURIComponent(mensaje)}`;
+            
+            // WhatsApp Number (replace with actual number if needed)
+            const numeroWhatsApp = "51999999999";
+            
+            // Open WhatsApp
+            window.open(`https://wa.me/${numeroWhatsApp}?text=${texto}`, '_blank');
+        }
+    </script>
+</body>
+</html>
+
